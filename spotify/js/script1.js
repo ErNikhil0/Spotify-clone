@@ -50,7 +50,6 @@ async function getSongs(folder) {
             <img src="img/play.svg" alt="">
         </div></li>`;
     }
-    // attaching event listner to all songs
     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             console.log(e.querySelector(".info").firstElementChild.innerHTML)
@@ -63,7 +62,7 @@ async function getSongs(folder) {
 }
     
 
-    // attach an event listner to play,pause and previous
+    
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play()
